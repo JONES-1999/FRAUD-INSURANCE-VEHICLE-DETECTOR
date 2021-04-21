@@ -1,0 +1,129 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("IMG_7089.JPG");
+background-repeat:no-repeat;
+background-size:cover;
+}
+ul{
+   list-style-type:none;
+   margin:0;
+   padding:0;
+   overflow:hidden;
+   }
+   ul li{
+    float:left;
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    color:blue;
+    font-weight: bold;
+   }
+   ul li a{
+    text-decoration: none;
+    display: block;
+font-weight: bold;   
+}
+
+a:link,a:visited{
+  display:block;
+  front-weight:bold;
+  color:#FFFFFF;
+  background-color:#IE88E5;
+  width:200px;
+  text-align:center;
+  padding:5px;
+  text-decoration:none;
+  }
+a:hover,a:active{
+  background-color:#BDBDBD;
+  }
+li{
+  float:left;
+  }
+
+div{
+margin-top:50px;
+padding:40px;
+width:40%;
+position:relative;
+border-radius:5px;
+display:inline-block;
+background-color:#cedcff;
+box-shadow:20px 20px 20px #194f90;
+opacity:0.7;
+}
+input[type=text]{
+padding:5px;
+}
+input[type=submit]{
+padding:5px;
+font-family:forte;
+box-shadow:2px 5px;
+}
+label{
+padding:5px;
+font-size:30px;
+}
+}
+
+</style>
+<title>INSURANCE REGISTRATION FORM</title>
+</head>
+<body>
+
+<h4 style=background-color:#0000FF><b><center><font color="white">
+<h1 style=background-color:RED><center><b>VEHICLE INSURANCE</b>
+</center></h1>
+
+
+</style></center></h4>
+
+</mark>
+
+<a href="home.html"></a>
+
+<form action="insuranceregister.php" method="post" enctype="multipart/form-data">
+<center><div><table>
+
+<tr><td>OWNER NAME</td><td><input type="text" name="OWNER_NAME" required="required"/></td></tr>
+<tr><td>OWNER ADDRESS</td><td><input type="text" name="OWNER_ADDRESS" required="required"/></td></tr>
+<tr><td>VEHICLE REGISTERATION NUMBER</td><td><input type="text" name="VEHICLE_REGISTERATION_NUMBER" maxlength="10" required="required"/></td></tr>
+
+<tr><td>INSURANCE COMPANY</td>  <td> <select name="INSURANCE_COMPANY" width="30" height="10" required="required">
+<option></option>
+<option value="National Insurance">National Insurance</option>
+<option value="LIC">LIC</option>
+<option value="STAR HEALTH INSURANCE">STAR HEALTH INSURANCE</option>
+<option value="SBI General Insurance">SBI General Insurance</option>
+<option value="ICICI INSURANCE">ICICI INSURANCE</option>
+<option value="BAJAJ ALLIANZ LIFE INSURANCE">BAJAJ ALLIANZ LIFE INSURANCE</option>
+</select></td></tr>
+
+
+<tr><td>INSURANCE NUMBER</td><td><input type="text" maxlength="10" name="INSURANCE_NUMBER" required="required"/></td></tr>
+
+<tr><td>LICENSE NUMBER</td><td><input type="text" maxlength="10" name="LICENSE_NUMBER" required="required"/></td></tr>
+
+<tr><td>VEHICLE NAME</td><td><input type="text" name="VEHICLE_NAME" required="required"/></td></tr>
+
+<tr><td>VEHICLE MODLE</td><td><input type="text" name="VEHICLE_MODLE" required="required"/></td></tr>
+
+<tr><td>VEHICLE COLOUR</td><td><input type="text" name="VEHICLE_COLOUR" required="required"/></td></tr>
+
+<tr><td>REGISTERED DATE</td><td><input type="date" name="REGISTERED_DATE" maxlength="10" required="required"/></td></tr>
+
+<tr><td>INSURENCE STARTING DATE</td><td><input type="date" name="INSURENCE_STARTING_DATE" maxlength="10" required="required"/></td></tr>
+
+<tr><td>INSURENCE EXPIRY DATE</td><td><input type="date" name="INSURENCE_EXPIRY_DATE" maxlength="10" required="required"/></td></tr>
+<tr><td colspan="2" align="center"><BR>
+
+<button onclick="myFunction()">UPLOAD</button>
+
+</table>
+</div></center>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>VEHICLE INSURANCE DETECTOR</title>
+<style type="text/css">
+body{
+background-image:url("img_7089.JPG");
+background-repeat:no-repeat;
+background-size:cover;
+}
+h1{
+   height:80px;
+   font-size:46;
+   color:#FFFF;
+   text-align:center;
+   line-height:80px;
+   }
+.bb{
+    width:500px;
+    height:550px;
+    background-color:rgb(0,0,0,0.6);
+    margin:0 auto;
+    
+margin-top:10px;
+    padding-top:10px;
+    padding-left:100px;
+    }
+.btn{
+     font-family:arial;
+     text-transform: uppercase;
+     font-size:16px;
+     width:150px;
+     height:45px;
+     border-radius:50px;
+     line-height:40px;
+     text-align:40px;
+     border:3px solid#009688;
+     text-decoration:none;
+     color:#FFFFFF;
+     position:relative;
+     background:transparent;
+     transition: .3s;
+     }
+.btn:hover{
+     background-color:#009688;
+     }
+.alert{
+    font-color:red;
+}
+</style>
+</head>
+<body>
+<div>
+<a href="home.html"></a>
+
+<form action="register.php" method="post" onsubmit="return validation()">
+<h1 style=background-color:#2196F3><b><center><font color="white">USER SIGN UP</style></center></h1>
+<div class="bb">
+<font face="Gill Sans MT"><table cellspacing="10" cellpadding="10">
+<tr>
+<td><b><font color="#FFFFFF">FIRST NAME</font></b></td><td><input type="text" id="FIRST_NAME" name="FIRST_NAME" required></td>
+</tr>
+<tr>
+<td><b><font color="#FFFFFF">LAST NAME</font></b></td><td><input type="text" id="LAST_NAME" name="LAST_NAME" required></td>
+</tr>
+
+
+<tr>
+<td><b><font color="#FFFFFF">AGE</font></b></td><td><input type="number" id="AGE" name="AGE" required></td>
+</tr>
+
+<tr>
+<td><b><font color="#FFFFFF">VEHICLE TYPE</font></b></td><td><input type="text" name="VEHICLE_TYPE"required></td>
+</tr>
+
+<tr>
+<td><b><font color="#FFFFFF">AADHAR NO</font></b></td><td><input type="number" name="AADHAR_NO"required></td>
+</tr>
+
+<tr>
+<td><b><font color="#FFFFFF">DATE OF BIRTH</font></b></td><td><input type="DATE" name="DATE_OF_BIRTH" required/></td></B>
+</tr>
+
+<tr>
+<td><b><font color="#FFFFFF">MOBILE</font></b></td><td><input type="number" id="MOBILE"  name="MOBILE" pattern="['0-9']{10}" title="enter 10 digit number" required></td>
+</tr>
+
+
+<tr>
+<td><b><font color="#FFFFFF">USER ID</font></b></td><td><input type="text" name="USER"required></td>
+</tr>
+
+
+
+<tr>
+<td><b><font color="#FFFFFF">PASSWORD</font></b></td><td><input type="password" id="pass1" name="PASSWORD"  title="ENTER CORRECT PASSWORD" required></td>
+</tr>
+
+<tr>
+<td><input type="reset" class="btn" name="RESET"></td>
+<td><input type="submit" class="btn" value="SUBMIT"></td>
+</tr>
+</table>
+
+</body>
+</html>

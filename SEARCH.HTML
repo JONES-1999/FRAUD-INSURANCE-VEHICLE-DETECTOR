@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>USER DETAILS</title>
+<style type="text/css">
+body{
+     background-image: url(bike3.jpg);
+}
+h1{
+   height:80px;
+   font-size:46;
+   color:#FFFF;
+   text-align:center;
+   line-height:80px;
+   }
+table{
+      border-collapse: collapse;
+      width: 100%;
+      color: #d96459;
+      font-family: monospace;
+      text-align: center;
+      line-height:40px;
+      margin-top: 200px;
+      }
+th{
+   background-color: #d96459;
+   color: white;
+   font-size: 16px;
+   }
+td{
+   font-size: 16px;
+  }
+</style>
+</head>
+<body>
+<h1 style=background-color:#d96459><b><center><font color="white">USER DETAILS</style></center></h1>
+<table border="5px">
+<TH>
+<TR>OWNER NAME</TR>
+<TR>OWNER ADDRESS</TR>
+<TR>VEHICLE REGISTERATION NUMBER</TR>
+<TR>VEHICLE NAME</TR>
+<TR>VEHICLE MODEL</TR>
+<TR>VEHICLE COLOUR</TR>
+<TR>REGISTERED DATE</TR>
+<TR>INSURENCE STARTING DATE</TR>
+<TR>INSURENCE EXPIRY DATE</TR>
+</TH>
+<?php
+$con=mysqli_connect('localhost', 'root', '', 'insurance');
+if(!$con){
+die("Could not connect:".$con->connect_error());
+}
+$query="SELECT * FROM vehicle WHERE VEHICLE_REGISTERATION_NUMBER='".$_POST['VEHICLE_REGISTERATION_NUMBER']."'";
+$result= mysqli_query($con,$query);
+while($row= mysqli_fetch_array($result)){
+echo "<tr><td>".$row["OWNER_NAME"]."</td><td>".$row["OWNER_ADDRESS"]."</td><td>".$row["VEHICLE_REGISTERATION_NUMBER"]."</td><td>".$row["VEHICLE_NAME"]."</td><td>".$row["VEHICLE_MODEL"]."</td><td>".$row["VEHICLE_COLOUR"]."</td><td>".$row["REGISTERED_DATE"]."</td><td>".$row["INSURENCE_STARTING_DATE"]."</td><td>".$row["INSURENCE_EXPIRY_DATE"]."</td></tr>";
+}
+?>

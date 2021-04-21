@@ -1,0 +1,59 @@
+body
+{
+background-image:url("bike.jpg");
+background-size: cover;
+background-position:center;
+}
+
+.banner
+{
+	max-width: 450px;
+	border-radius: 20px;
+	margin: auto;
+	background: rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	padding: 40px;
+	color: #fff;
+	margin-top: 10px;
+
+font-family: Century Gothic;
+
+}
+
+
+ul{
+   list-style-type:none;
+   margin:0;
+   padding:0;
+   overflow:hidden;
+   }
+   ul li{
+    float:left;
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    color:blue;
+    font-weight: bold;
+   }
+   ul li a{
+    text-decoration: none;
+    display: block;
+   }
+a:link,a:visited{
+  display:block;
+  front-weight:bold;
+  color:#FFFFFF;
+  background-color:#IE88E5;
+  width:200px;
+  text-align:center;
+  padding:5px;
+  text-decoration:none;
+  }
+a:hover,a:active{
+  background-color:#BDBDBD;
+  }
+li{
+  float:left;
+  }
+
+

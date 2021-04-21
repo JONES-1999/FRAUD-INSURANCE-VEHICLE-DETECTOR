@@ -1,0 +1,112 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 28, 2020 at 04:09 AM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `insurance`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admindeatils`
+--
+
+CREATE TABLE `admindeatils` (
+  `FIRST NAME` varchar(20) NOT NULL,
+  `LAST NAME` varchar(20) NOT NULL,
+  `DOB` date NOT NULL,
+  `ADMIN POSITION` varchar(20) NOT NULL,
+  `ADDRESS` varchar(90) NOT NULL,
+  `UNIQUE REGISTERATION NUMBER` varchar(20) NOT NULL,
+  `ADMIN` varchar(20) NOT NULL,
+  `PASSWORD` varchar(20) NOT NULL,
+  PRIMARY KEY  (`ADMIN`),
+  UNIQUE KEY `UNIQUE REGISTERATION NUMBER` (`UNIQUE REGISTERATION NUMBER`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admindeatils`
+--
+
+INSERT INTO `admindeatils` (`FIRST NAME`, `LAST NAME`, `DOB`, `ADMIN POSITION`, `ADDRESS`, `UNIQUE REGISTERATION NUMBER`, `ADMIN`, `PASSWORD`) VALUES
+('Jones', 'Arputharaj', '1999-07-01', 'RTO', 'KK NAGAR WEST', 'RTOWEST01071999', 'J123', '123456'),
+('KEJIN', 'ANIT', '1999-05-07', 'RTO', 'CHENNAI', '0987651234', 'KJ', '123456'),
+('STEAPHY', 'VERONICA', '2000-05-13', 'RTO', 'KK NAGAR WEST', 'RTO1234670', 'STRRTO123', '123456'),
+('VIKASH', 'RAVICHANDRAN', '1999-07-06', 'thasildar', 'chennai', 'thalsil1234', 'th123', '123456');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+CREATE TABLE `register` (
+  `FIRST NAME` varchar(20) NOT NULL,
+  `LAST NAME` varchar(20) NOT NULL,
+  `AGE` int(3) NOT NULL,
+  `VEHICLE TYPE` varchar(20) NOT NULL,
+  `AADHAR NO` int(12) NOT NULL,
+  `DATE OF BIRTH` date NOT NULL,
+  `INSURANCE COMPANY` varchar(30) NOT NULL,
+  `MOBILE` int(10) NOT NULL,
+  `USER` varchar(20) NOT NULL,
+  `PASSWORD` varchar(20) NOT NULL,
+  PRIMARY KEY  (`USER`),
+  UNIQUE KEY `USER` (`USER`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`FIRST NAME`, `LAST NAME`, `AGE`, `VEHICLE TYPE`, `AADHAR NO`, `DATE OF BIRTH`, `INSURANCE COMPANY`, `MOBILE`, `USER`, `PASSWORD`) VALUES
+('Jones', 'Arputharaj', 20, 'FOUR WHEELER', 2147483647, '1999-07-01', 'LIC', 2147483647, 'JOE01', '1234567890'),
+('VIKASH', 'RAVICHANDRAN', 20, 'FOUR WHEELER', 2147483647, '1999-08-07', 'SBI General Insurance', 2147483647, 'VICKY01', '123456'),
+('VINOTH', 'KUMAR', 19, 'TWO WHEELER', 2147483647, '1999-06-29', 'SBI General Insurance', 2147483647, 'VJ', '123456');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vehicle`
+--
+
+CREATE TABLE `vehicle` (
+  `OWNER_NAME` varchar(20) NOT NULL,
+  `OWNER_ADDRESS` varchar(80) NOT NULL,
+  `VEHICLE_REGISTERATION_NUMBER` varchar(15) NOT NULL,
+  `INSURANCE_COMPANY` varchar(30) NOT NULL,
+  `INSURANCE_NUMBER` varchar(10) NOT NULL,
+  `LICENSE_NUMBER` varchar(30) NOT NULL,
+  `VEHICLE_NAME` varchar(20) NOT NULL,
+  `VEHICLE_MODEL` varchar(20) NOT NULL,
+  `VEHICLE_COLOUR` varchar(15) NOT NULL,
+  `REGISTERED_DATE` date NOT NULL,
+  `INSURENCE_STARTING_DATE` date NOT NULL,
+  `INSURENCE_EXPIRY_DATE` date NOT NULL,
+  PRIMARY KEY  (`VEHICLE_REGISTERATION_NUMBER`),
+  UNIQUE KEY `LICENSE NUMBER` (`LICENSE_NUMBER`),
+  UNIQUE KEY `INSURANCE NUMBER` (`INSURANCE_NUMBER`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vehicle`
+--
+
+INSERT INTO `vehicle` (`OWNER_NAME`, `OWNER_ADDRESS`, `VEHICLE_REGISTERATION_NUMBER`, `INSURANCE_COMPANY`, `INSURANCE_NUMBER`, `LICENSE_NUMBER`, `VEHICLE_NAME`, `VEHICLE_MODEL`, `VEHICLE_COLOUR`, `REGISTERED_DATE`, `INSURENCE_STARTING_DATE`, `INSURENCE_EXPIRY_DATE`) VALUES
+('JONES ARPUTHARAJ', 'KODAMBAKKAM CHENNAI', 'TN 01 SJ 0107', 'National Insurance', 'NI1917', 'TNKD1999', 'BENZ', 'Z SERIES', 'BLUE', '2017-02-28', '2018-02-28', '2019-03-01'),
+('VIKASH RAVICHANDRAN', 'KODAMBAKKAM CHENNAI', 'TN 01 VJ 1999', 'STAR HEALTH INSURANCE', 'SHI1234567', 'TN04BN24', 'BMW', 'Z SERIES', 'BLUE', '2017-03-28', '2017-03-29', '2020-04-30'),
+('VINOTH KUMAR', 'CHENNAI', 'TN09TJ1999', 'BAJAJ ALLIANZ LIFE INSURANCE', 'BA123456', 'TVKK1234', 'YAMAHAA', 'TWO WHEELER', 'PINK', '2018-07-01', '2019-07-02', '2020-07-03');
