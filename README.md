@@ -1,0 +1,2 @@
+# FRAUD-INSURANCE-VEHICLE-DETECTOR
+Insurance fraud is serious and growing problem and there is widespread recognition that traditional approaches to tackling fraud inadequate the main identifying factor is to check the insurance is fraud is to check if the insurance hard copy match the soft copy of the insurance stored in the database the cop check the insurance compare the soft copy details that he obtained by entering the vehicle number in the website with a hardcopy that provide by a vehicle owner incase of any mismatch the insurance determine to be a fraud.
